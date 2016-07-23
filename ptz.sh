@@ -1,12 +1,4 @@
 #!/bin/bash
-PIDtoKILL=$(cat /tmp/ptz.pid)
-kill -9 $PIDtoKILL
-echo "***********Monitoramento parado!***********" >> /var/log/syslog
-sleep 1
-rm -f /tmp/ptz.pid
-exit 0
-root@zoneminder:/var/www/html/images# cat /etc/ptz.sh
-#!/bin/bash
 
 echo $$ > /tmp/ptz.pid
 DIR="/var/www/html/images"
